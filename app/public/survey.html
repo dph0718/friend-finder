@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title>Might as Well</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Lobster|Londrina+Solid" rel="stylesheet">
+</head>
+
+<body id='body-survey'>
+    <form>
+        <h1>Your future spouse needs to know:</h1>
+        <h3>your first name.</h3>
+        <input id="first-name" type="text" placeholder="Mike">
+        <h3>your last name.</h3>
+        <input id="last-name" type="text" placeholder="Hockburns">
+        <h3>what gender you're looking to mate with.</h3>
+        <input type="radio" name="iso" value="male"> Male
+        <br>
+        <input type="radio" name="iso" value="female">Female
+        <br>
+        <input type="radio" name="iso" value="neither">Neither
+        <br>
+        <input type="radio" name="iso" value="no preference">No preference
+        <br>
+        <h3>what gender you consider yourself.</h3>
+        <input type="radio" name="gender" value="male">Male
+        <br>
+        <input type="radio" name="gender" value="female">Female
+        <br>
+        <input type="radio" name="gender" value="neither">Neither
+        <br>
+        <input type="radio" name="gender" value="none">None
+        <br>
+
+
+        <h3>what you look like.</h3>
+        <h4>(and we swear, if you catfish, we will break both of your femurs. We have that power.)</h4>
+        <input id="photo" type="file">
+
+        <p class='instructions'>The following criteria have been shown in numerous studies
+            <sup>
+                <a target='blank' href="https://en.wikipedia.org/wiki/Romance_(love)">1, 2,</a>
+                <a target='blank' href="https://en.wikipedia.org/wiki/Kama_Sutra">3, 4</a>
+            </sup>
+            to be the definitive variables for determining the strength, longevity, and happiness of relationships.
+            <br> Evaluate your agreement with each statement using the slider; left-most if you strongly disagree with the statement,
+            right-most if you strongly agree.
+            <br> Answer honestly and to the best of your ability to ensure maximum compatibility.</p>
+        <div id="questions">
+
+            <!-- survey.js will pop all the questions in here. -->
+
+        </div>
+
+    </form>
+    <img src='images/lips.png' id="final">
+
+    <!-- The Modals -->
+    <div id="match" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="your-match">Your Match:
+                    <span class='match-name'></span>
+                </h2>
+            </div>
+            <div class="modal-body">
+                <img class='modal-pic' />
+                <div class='btn-box'>
+                    <a class='btn' id='no' value="no">No Thanks.</a>
+                    <a class='btn' id='yes' value="yes">Yes, Please!</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="no-match" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>No Match for You!</h2>
+            </div>
+            <div class="modal-body">
+                <img class='modal-pic' />
+                <div class='btn-box'>
+                    <p id='sorry'>Don't be discouraged. There are plenty of fish in the sea, though you may have to resort to dating one.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="alone" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>You'll Probably Regret That.</h2>
+            </div>
+            <div class="modal-body">
+                <img class='modal-pic' />
+                <div class='btn-box'>
+                    <p id='sorry'>Beggars can't be choosers. I'm sure
+                        <span class="match-name"></span> wasn't happy to see that you matched, either.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+    <div id="married" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="your-match">Your Match:
+                    <span class='match-name'></span>
+                </h2>
+            </div>
+            <div class="modal-body">
+                <img class='modal-pic' />
+                <div class='btn-box'>
+                    <p id='sorry'>You are now legally married to
+                        <span class="match-name"></span>
+                        <span class="match-last-name"></span>.
+                        <br> Boy, have you made a mistake!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="survey.js"></script>
+
+</body>
+
+</html>

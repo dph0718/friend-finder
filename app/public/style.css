@@ -1,0 +1,284 @@
+
+html{
+    height: 100%;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#body-home{
+    background-image: url("images/couple.png");
+    background-position: 50%, 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+#start{
+    position: fixed;
+    top: 35%;
+    width: 25%;
+}
+#head{
+    position: fixed;
+    top: 8%;
+}
+#body-survey{
+    background-image: url("images/redsilk.png");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    background: linear-gradient(to right, rgba(12, 12, 12, 0),rgba(141, 99, 99, 0.5), rgba(12, 12, 12, 0));
+    color: rgb(237, 239, 255);
+    font-family: "lobster";
+    text-shadow: 2px 2px 2px rgb(75, 35, 52);
+}
+
+h2, h3 {
+    color: whitesmoke;
+    font-family: 'caveat';
+}
+
+form{
+    color: rgb(237, 239, 255);
+    font-family: "lobster";
+    text-shadow: 2px 2px 2px rgb(75, 35, 52);
+    width: 70%;
+}
+
+input{
+    font-family: 'caveat';
+}
+
+.slider {
+    width: 60%;
+}
+#questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+hr{
+    width: 200px;
+}
+.question-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.question{
+    font-size: 2vw;
+    align-self: flex-start;
+    font-family: 'caveat';
+    color: white;
+    text-shadow: 1px 1px 0 gray;
+    background: linear-gradient(to right, rgba(12, 12, 12, 0),rgb(140, 27, 7), rgba(12, 12, 12, 0));
+
+}
+.slider-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'londrina solid';
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-shadow:  1px 1px 0 whitesmoke;
+}
+
+.agree{
+    text-align: center;
+    padding: 6px;
+    background-color: rgba(30, 102, 30, 0.5);
+    color: rgb(55, 55, 55);
+}
+
+.disagree{
+    background-color: rgba(175, 49, 49, 0.5);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a:visited {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover{
+    /* outline: red 2px inset; */
+    box-shadow: 0 0 100px rgb(152, 40, 40);
+}
+
+a:active{
+    border: gray inset 8px;
+}
+
+.instructions{
+    padding: 20px 30px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    text-shadow: 0.5px 0.5px 9px rgba(237, 237, 237, 0.8);
+    font-weight: bold;
+    background: linear-gradient(to right ,rgba(141, 107, 107, 0.5), rgba(191, 191, 191, 1), rgb(12, 12, 12, 0.5));
+}
+
+#sorry{
+    font-family:'londrina solid';
+    font-size: 3vw;
+    color: black;
+    text-shadow: 1px 1px 1px gray;
+}
+.btn {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    border: gray outset 8px;
+    border-radius: 14px;
+    background: linear-gradient(120deg,rgb(141, 107, 107), rgb(84, 10, 42), rgb(12, 12, 12));
+}
+/* Modal Content */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%; 
+    font-family: 'caveat';
+    color: whitesmoke;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    -webkit-animation-name: fadeIn; 
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    background-color: rgb(235, 199, 155);
+    width: 100%;
+    height: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background: linear-gradient(-60deg,rgb(141, 107, 107), rgb(84, 10, 42), rgb(12, 12, 12));
+    color: white;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background: linear-gradient(120deg,rgb(141, 107, 107), rgb(84, 10, 42), rgb(12, 12, 12));
+    color: white;
+    height:10%;
+    bottom: 0;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn-box{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+}
+.btn{
+    width: 80%; 
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.8vw;
+}
+#yes{
+    background: linear-gradient(120deg,rgb(54, 223, 12), rgb(8, 99, 34), rgb(12, 12, 12));
+}
+
+#no{
+    background: linear-gradient(120deg,rgb(141, 107, 107), rgb(84, 10, 42), rgb(12, 12, 12));
+}
+
+.modal-pic{
+    height: 80%;
+    padding: 10px;
+    object-fit: contain;
+}
+
+#final{
+    background-image: url('images/lips.png')
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
