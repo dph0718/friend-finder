@@ -259,7 +259,12 @@ a:active{
 }
 
 #final{
-    background-image: url('images/lips.png')
+    width: 10%;
+    text-shadow: 0 0 7px white;
+}
+
+#final:hover{
+    cursor: pointer;
 }
 
 /* Add Animation */
